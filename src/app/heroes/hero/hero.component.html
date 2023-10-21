@@ -14,12 +14,22 @@
   <td>Capitalized: </td>
   <dd> {{capitalizedName}} </dd>
 
-  <button (click)="changeHero()" class="btn btn-primary mx-2">
+  <button
+    *ngIf="name !== 'SpiderMan'"
+    (click)="changeHero()" class="btn btn-primary mx-2">
     Change name
   </button>
 
-  <button (click)="changeAge()" class="btn btn-primary">
+  <button
+    *ngIf="age !== 20"
+    (click)="changeAge()" class="btn btn-primary">
     Change age
+  </button>
+
+  <button
+    (click)="resetForm()"
+    class="btn btn-primary mx-2">
+    Reset form
   </button>
 
 </dl>
