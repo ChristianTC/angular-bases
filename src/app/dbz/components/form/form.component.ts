@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Character } from '../../interfaces/character.interface';
 
 @Component({
   selector: 'dbz-add-character',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
+
+  public character:Character = {
+    name: '123',
+    power: 0
+  };
+
+  emitCharacter() {
+    console.log(this.character);
+  }
 
 }
